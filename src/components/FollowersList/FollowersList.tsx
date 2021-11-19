@@ -21,8 +21,12 @@ const FollowersList: FC = () => {
   return (
     <div className="followerslist-container">
       <div>
-        {followers.map((follower: IFollower) => (
-          <div className="follower-item" key={follower.login.username}>
+        {followers.map((follower: IFollower, index: number) => (
+          <div
+            className="follower-item"
+            key={follower.login.username}
+            data-testid={`follower-item-${index}`}
+          >
             <img alt={follower.login.username} src={follower.picture.large} />
             <div className="followers-details">
               <div className="follower-item-name">
