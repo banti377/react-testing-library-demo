@@ -13,7 +13,7 @@ const MockFooter: FC<Props> = ({ numberOfIncompleteTasks }) => (
   </Router>
 );
 
-describe('footer', () => {
+describe('Footer', () => {
   it('should render the correct amount of incomplete tasks', async () => {
     render(<MockFooter numberOfIncompleteTasks={2} />);
     const paragraphElement = screen.getByText(/2 tasks left/i);
