@@ -37,8 +37,10 @@ const TodoList: FC<Props> = ({ todos, setTodos }) => {
         <div>
           {todos.map((todo: ITodo) => (
             <div
+              key={todo.id}
               className={`todo-item ${todo.completed && 'todo-item-active'}`}
               onClick={() => updateTask(todo.id)}
+              data-testid="task-container"
             >
               {todo.task}
             </div>
